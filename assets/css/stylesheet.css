@@ -1,0 +1,109 @@
+/* Body */
+body{
+    margin: 0;
+    background-color: rgb(29, 28, 28);
+    text-align: center;
+    font-family: cursive;
+}
+
+#main-heading{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: blanchedalmond;
+}
+
+/* Content Box */
+
+#content-div{   
+    width: 50%;
+    height: 550px;
+    background-color: black;
+    border: 1px solid blanchedalmond;
+    margin-left: 25%;
+    margin-bottom: 2px;
+}
+
+.inputs{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(36, 30, 30);
+    border: 0;
+    padding: 10px;
+    color: blanchedalmond;
+    border: 1px solid blanchedalmond;
+    font-size: 1.2rem;
+}
+
+#category-div{
+    margin-top: 4px;
+    width: 49%;
+    display: inline-block;
+}
+
+#date-div{
+    margin-top: 5px;
+    width: 49%;
+    display: inline-block;
+}
+
+#add-btn{
+    margin-top: 2%;
+    height: 10%;
+    width: inherit;
+    font-size: 1.5rem;
+    background-image: linear-gradient(green,yellow);
+    font-family: cursive;
+}
+
+#del-btn{
+    margin-top: 2%;
+    height: 10%;
+    width: inherit;
+    font-size: 1.5rem;    
+    background-image: linear-gradient(darkred,red);
+    font-family: cursive;
+}
+
+/* Task Appearing Box */
+
+#todo-container{
+    background-color: rgb(36, 30, 30);
+    margin-top: 15px;
+    height: 345px;
+    width: 100%;
+    overflow: scroll;
+}
+
+#todo-container::-webkit-scrollbar{
+    display: none;
+}
+
+.tasks{
+    color: blanchedalmond;
+    list-style: none;
+}
+
+.list-item{
+    text-align: start;
+    font-family: cursive;
+    font-size: 1.5rem;
+    margin-top: 10px
+}
+
+.item_category{
+    display: inline-block;
+    font-size: 1rem;
+    background-image: linear-gradient(rgb(248, 141, 0),yellow);
+    color: black;
+    width: 20%;
+    text-align: center;
+}
+
+.item_duedate{
+    display: inline-block;
+    font-size: 1rem;
+    background-image: linear-gradient(green,yellow);
+    color: black;
+    width: 30%;
+    text-align: center;
+}

@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="/css/stylesheet.css">
+        <script src="https://kit.fontawesome.com/6726376c83.js" crossorigin="anonymous"></script>
+    </head>
+        <body>
+
+            <!-- Main heading of the TODO list -->
+
+            <h1 id="main-heading">
+                <i class="fas fa-clipboard-list"></i>
+                MY TODO APP
+            </h1>
+
+            <!-- This is the content division -->
+
+            <div id="content-div">
+
+                <!-- Creating the form -->
+
+                <form action="/add-task/" method="POST">
+                    <div id="description-div">
+                        <input class="inputs" id="description" type="text" name="description" required placeholder="What do you need to do ?">
+                    </div>
+                    <div id="category-div">
+                        <select class="inputs" name='category' >
+                            <option class="inputs">Personal</option>
+                            <option class="inputs">Work</option>
+                            <option class="inputs">Cleaning</option>
+                            <option class="inputs">School</option>
+                        </select>
+                    </div>
+                    <div id="date-div">
+                        <input class="inputs" id="date" type="date" name='date' placeholder="DUE DATE" required>
+                    </div>
+                    
+                    <div>
+                        <button id="add-btn" type="submit"><i class="fas fa-plus-square">&ensp;</i>ADD</button>
+                       <button id="del-btn" type="button" onclick="delete_content()"><i class="fas fa-trash-alt"></i>&ensp;</i>DELETE</button>
+                    </div>
+
+                <!-- Division where the added tasks appear -->
+                
+                <div id="todo-container">
+                    <ul class="tasks">
+                        <%for (let i of todo_list){%>
+                            <li class='list-item'>
+                                <input class="check" id="checkbox" type="checkbox" name="taskcheck" value=<%= i.id %> >&ensp;<%= i.task %><br>
+                                <div class="item_category">
+                                    <%= i.category %>
+                                </div>
+                                <div class="item_duedate">
+                                    <i class="fas fa-calendar-week"></i>&ensp;<%= i.dueDate %>
+                                </div>
+                            </li>
+                        <%}%>
+                    </ul>
+                </div>
+                </form>
+            </div>
+
+        </body>
+        <script type="text/javascript" src="/js/home.js"></script>
+</html>
